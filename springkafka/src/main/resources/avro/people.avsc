@@ -9,11 +9,11 @@
 		},
 		{
 			"name": "name",
-			"type": "string",
+			"type": "string"
 		},
 		{
 			"name": "cpf",
-			"type": "string",
+			"type": "string"
 		},
 		{
 			"name": "books",
@@ -21,6 +21,6 @@
 				"type": "array",
 				"items": "string"
 			}
-		},
+		}
 	]
 }
