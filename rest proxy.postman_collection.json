@@ -209,6 +209,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "People - producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"James\",\r\n    \"cpf\": \"123456789\",\r\n    \"books\": [\r\n        \"livro 01\",\r\n        \"livro 02\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/peoples",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"peoples"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

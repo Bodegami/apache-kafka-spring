@@ -4,6 +4,7 @@ import br.com.springkafka.People;
 import br.com.springkafka.producer.PeopleProducer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ public class PeopleController {
 
     private final PeopleProducer peopleProducer;
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> sendMessage(@RequestBody PeopleDTO peopleDTO) {
         var id = UUID.randomUUID().toString();
 
