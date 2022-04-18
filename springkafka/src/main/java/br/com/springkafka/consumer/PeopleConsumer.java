@@ -39,8 +39,6 @@ public class PeopleConsumer {
 
         peopleRepository.save(peopleEntity);
 
-
         ack.acknowledge();
     }
-
 }
