@@ -19,7 +19,7 @@ public class PeopleProducer {
     }
 
     public void sendMessage(People people) {
-        kafkaTemplate.send(topicName, people).addCallback(
+        kafkaTemplate.send(topicName, (String) people.getId(), people).addCallback(
                 sucess -> log.info("Mensagem enviada com sucesso!"),
                 falure -> log.error("Falha ao enviar mensagem!")
         );
